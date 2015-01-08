@@ -1,0 +1,14 @@
+<form action="/bogs" method="post">
+  <!-- pass token along with post to prevent cross-site forgery -->
+    <%= token_tag form_authenticity_token %>
+  <!-- special field to allow us to 'Update' -->
+    <input type="hidden" name="_method" value="put">
+  
+  name:
+    <input type="text" name="bog[name]" value="<%= @bog.name %>">
+
+  description:
+    <textarea name="bog[description]" id="" cols="30" rows="10"><%= @bog.description %></textarea>
+
+  <button> Update Bog </button>
+</form>
