@@ -1,0 +1,11 @@
+<a href="/">Home</a>
+<a href="/bogs/new">New</a>
+
+<% @bogs.each do |bog| %>
+
+    <div>
+        Name: <%= bog[:name] %> <br>
+        Description: <%= bog[:description] %>
+    </div>
+
+<% end %>
