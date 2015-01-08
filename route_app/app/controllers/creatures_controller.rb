@@ -1,7 +1,7 @@
 class CreaturesController < ApplicationController
 	def index
 
-		@creatures = creature.all
+		@creatures = Creatures.all
 		render :index
 	end
 
